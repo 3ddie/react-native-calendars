@@ -186,8 +186,14 @@ class CalendarList extends Component {
    }
 
    renderCalendar({ item }) {
-      return (<CalendarListItem item={item} calendarHeight={this.props.calendarHeight}
-                                calendarWidth={this.props.horizontal ? this.props.calendarWidth : undefined} {...this.props} />);
+      return (
+         <CalendarListItem
+            item={item}
+            calendarHeight={this.props.calendarHeight}
+            calendarWidth={this.props.horizontal ? this.props.calendarWidth : undefined}
+            {...this.props}
+         />
+      );
    }
 
    getItemLayout(data, index) {
