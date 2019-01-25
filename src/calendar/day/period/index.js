@@ -124,13 +124,13 @@ class Day extends Component {
       textStyle.push(this.style.disabledText);
     } else if (this.props.state === 'today') {
       containerStyle.push(this.style.today);
+
+      if(this.props.marking.selected) {
+        containerStyle.push(this.style.todaySelected);
+      }
+
       textStyle.push(this.style.todayText);
     }
-
-     //If today selected
-     if (this.props.marking && this.props.marking.selected && this.style.todaySelected) {
-        containerStyle.push(this.style.todaySelected);
-     }
 
     if (this.props.marking) {
       const flags = this.markingStyle;
