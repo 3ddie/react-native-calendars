@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {
   TouchableWithoutFeedback,
   Text,
@@ -12,20 +11,20 @@ import * as defaultStyle from '../../../style';
 import styleConstructor from './style';
 
 class Day extends Component {
-  static propTypes = {
-    // TODO: selected + disabled props should be removed
-    state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
-
-    // Specify theme properties to override specific styles for calendar parts. Default = {}
-    theme: PropTypes.object,
-    marking: PropTypes.any,
-
-    onPress: PropTypes.func,
-    onLongPress: PropTypes.func,
-    date: PropTypes.object,
-
-    markingExists: PropTypes.bool,
-  };
+  // static propTypes = {
+  //   // TODO: selected + disabled props should be removed
+  //   state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
+  //
+  //   // Specify theme properties to override specific styles for calendar parts. Default = {}
+  //   theme: PropTypes.object,
+  //   marking: PropTypes.any,
+  //
+  //   onPress: PropTypes.func,
+  //   onLongPress: PropTypes.func,
+  //   date: PropTypes.object,
+  //
+  //   markingExists: PropTypes.bool,
+  // };
 
   constructor(props) {
     super(props);

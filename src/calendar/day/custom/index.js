@@ -3,22 +3,21 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import PropTypes from 'prop-types';
 
 import styleConstructor from './style';
 import {shouldUpdate} from '../../../component-updater';
 
 class Day extends Component {
-  static propTypes = {
-    // TODO: disabled props should be removed
-    state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
-
-    // Specify theme properties to override specific styles for calendar parts. Default = {}
-    theme: PropTypes.object,
-    marking: PropTypes.any,
-    onPress: PropTypes.func,
-    date: PropTypes.object
-  };
+  // static propTypes = {
+  //   // TODO: disabled props should be removed
+  //   state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
+  //
+  //   // Specify theme properties to override specific styles for calendar parts. Default = {}
+  //   theme: PropTypes.object,
+  //   marking: PropTypes.any,
+  //   onPress: PropTypes.func,
+  //   date: PropTypes.object
+  // };
 
   constructor(props) {
     super(props);

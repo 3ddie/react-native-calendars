@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
    FlatList, Platform, Dimensions,
 } from 'react-native';
-import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
 import { xdateToData, parseDate } from '../interface';
@@ -14,37 +13,37 @@ import CalendarListItem from './item';
 const { width } = Dimensions.get('window');
 
 class CalendarList extends Component {
-   static propTypes = {
-      ...Calendar.propTypes,
-
-      // Max amount of months allowed to scroll to the past. Default = 50
-      pastScrollRange: PropTypes.number,
-
-      // Max amount of months allowed to scroll to the future. Default = 50
-      futureScrollRange: PropTypes.number,
-
-      // Enable or disable scrolling of calendar list
-      scrollEnabled: PropTypes.bool,
-
-      // Enable or disable vertical scroll indicator. Default = false
-      showScrollIndicator: PropTypes.bool,
-
-      // When true, the calendar list scrolls to top when the status bar is tapped. Default = true
-      scrollsToTop: PropTypes.bool,
-
-      // Enable or disable paging on scroll
-      pagingEnabled: PropTypes.bool,
-
-      // Used when calendar scroll is horizontal, default is device width, pagination should be disabled
-      calendarWidth: PropTypes.number,
-
-      // Whether the scroll is horizontal
-      horizontal: PropTypes.bool,
-      // Dynamic calendar height
-      calendarHeight: PropTypes.number,
-
-      autoCalendarHeight: PropTypes.bool
-   };
+   // static propTypes = {
+   //    ...Calendar.propTypes,
+   //
+   //    // Max amount of months allowed to scroll to the past. Default = 50
+   //    pastScrollRange: PropTypes.number,
+   //
+   //    // Max amount of months allowed to scroll to the future. Default = 50
+   //    futureScrollRange: PropTypes.number,
+   //
+   //    // Enable or disable scrolling of calendar list
+   //    scrollEnabled: PropTypes.bool,
+   //
+   //    // Enable or disable vertical scroll indicator. Default = false
+   //    showScrollIndicator: PropTypes.bool,
+   //
+   //    // When true, the calendar list scrolls to top when the status bar is tapped. Default = true
+   //    scrollsToTop: PropTypes.bool,
+   //
+   //    // Enable or disable paging on scroll
+   //    pagingEnabled: PropTypes.bool,
+   //
+   //    // Used when calendar scroll is horizontal, default is device width, pagination should be disabled
+   //    calendarWidth: PropTypes.number,
+   //
+   //    // Whether the scroll is horizontal
+   //    horizontal: PropTypes.bool,
+   //    // Dynamic calendar height
+   //    calendarHeight: PropTypes.number,
+   //
+   //    autoCalendarHeight: PropTypes.bool
+   // };
 
    static defaultProps = {
       horizontal: false,
